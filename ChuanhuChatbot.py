@@ -8,8 +8,8 @@ import requests
 # import markdown
 import csv
 
-my_api_key = ""    # 在这里输入你的 API 密钥
-HIDE_MY_KEY = False # 如果你想在UI中隐藏你的 API 密钥，将此值设置为 True
+my_api_key = "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"    # 在这里输入你的 API 密钥
+HIDE_MY_KEY = True # 如果你想在UI中隐藏你的 API 密钥，将此值设置为 True
 
 initial_prompt = "You are a helpful assistant."
 API_URL = "https://api.openai.com/v1/chat/completions"
@@ -233,14 +233,14 @@ def compose_user(user_input):
 def reset_textbox():
     return gr.update(value='')
 
-title = """<h1 align="center">川虎ChatGPT 🚀</h1>"""
+title = """<h1 align="center">ChatGPT 🚀</h1>"""
 description = """<div align=center>
 
-由Bilibili [土川虎虎虎](https://space.bilibili.com/29125536) 和 [明昭MZhao](https://space.bilibili.com/24807452)开发
+此站点未设防护，内部使用，谨慎外传
 
-访问川虎ChatGPT的 [GitHub项目](https://github.com/GaiZhenbiao/ChuanhuChatGPT) 下载最新版脚本
+因为API资源有限，随时都有可能崩掉，如有问题请联系MXA
 
-此App使用 `gpt-3.5-turbo` 大语言模型
+此App使用 `gpt-3.5-turbo` 大语言模型，谨献给各位420同门使用
 </div>
 """
 customCSS = """
@@ -356,7 +356,7 @@ with gr.Blocks(css=customCSS) as demo:
 
 print("川虎的温馨提示：访问 http://localhost:7860 查看界面")
 # 默认开启本地服务器，默认可以直接从IP访问，默认不创建公开分享链接
-demo.title = "川虎ChatGPT 🚀"
+demo.title = "ChatGPT 🚀"
 
 #if running in Docker
 if dockerflag:
